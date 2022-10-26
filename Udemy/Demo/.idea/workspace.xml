@@ -22,14 +22,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Udemy"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Dev/DevPlayground/Demo&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Example">
     <configuration name="Example" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Example" />
@@ -75,7 +75,7 @@
       <updated>1666710082353</updated>
       <workItem from="1666710083974" duration="25000" />
       <workItem from="1666710169856" duration="23000" />
-      <workItem from="1666710201326" duration="13313000" />
+      <workItem from="1666710201326" duration="11881000" />
     </task>
     <servers />
   </component>
