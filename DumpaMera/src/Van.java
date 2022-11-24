@@ -1,6 +1,7 @@
 public class Van extends Vehicle {
-    public Van(String typeOfTruck) {
-        super(typeOfTruck);
+    public Van(int weight) {
+
+        super("Van", weight);
     }
 
 

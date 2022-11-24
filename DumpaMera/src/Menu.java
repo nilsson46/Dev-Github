@@ -7,7 +7,6 @@ public class Menu {
     UnloadingPlace unloadingPlace = new UnloadingPlace();
 
     public void menu() {
-        List<Vehicle> vehicleList = new ArrayList<>();
 
         boolean quit = false;
         while (!quit) {
@@ -16,36 +15,36 @@ public class Menu {
             int choiceOfAction = scanner.nextInt();
 
             if (choiceOfAction == 1) {
-                System.out.println(vehicleList.get(0)+ " " + unloadingPlace.getBays().get(0).getBayName());
-                System.out.println(vehicleList.get(1) + " " + unloadingPlace.getBays().get(1).getBayName());
-                System.out.println(vehicleList.get(2) + " " + unloadingPlace.getBays().get(2).getBayName());
-                System.out.println(vehicleList.get(3) + " " + unloadingPlace.getBays().get(3).getBayName());
-                System.out.println(vehicleList.get(4) + " " + unloadingPlace.getBays().get(4).getBayName());
+                System.out.println(unloadingPlace.getBays().get(0).getBayName() + " - " + unloadingPlace.getBays().get(0).getVehicle());
+                System.out.println(unloadingPlace.getBays().get(1).getBayName() + " - " + unloadingPlace.getBays().get(1).getVehicle());
+                System.out.println(unloadingPlace.getBays().get(2).getBayName() + " - " + unloadingPlace.getBays().get(2).getVehicle());
+                System.out.println(unloadingPlace.getBays().get(3).getBayName() + " - " + unloadingPlace.getBays().get(3).getVehicle());
+                System.out.println(unloadingPlace.getBays().get(4).getBayName() + " - " + unloadingPlace.getBays().get(4).getVehicle());
+
             } else if (choiceOfAction == 2) {
 
-                outPrint.secondMenu();
+                System.out.println("Vikt på lastbilen :");
+                int weight = scanner.nextInt();
 
+                outPrint.secondMenu();
                 Vehicle vehicle = null;
                 int choiceOfTruck = scanner.nextInt();
                 if (choiceOfTruck == 1) {
-                    vehicle = new Van("Van");
-                    vehicleList.add(vehicle);
+                    vehicle = new Van(weight);
+                    unloadingPlace.addVehicle(vehicle);
                 }
-                if (choiceOfTruck == 2) {
-                    vehicle = new SmallTruck("SmallTruck");
-                    vehicleList.add(vehicle);
+                else if (choiceOfTruck == 2) {
+                    vehicle = new SmallTruck(weight);
+                    unloadingPlace.addVehicle(vehicle);
 
                 } else if (choiceOfTruck == 3) {
-                    vehicle = new HeavyTruck("HeavyTruck");
-                    vehicleList.add(vehicle);
+                    vehicle = new HeavyTruck(weight);
+                    unloadingPlace.addVehicle(vehicle);
                 }
                 if (vehicle != null) {
 
-                    System.out.println("Vikt på lastbilen :");
-                    int weight = scanner.nextInt();
-                    vehicle.setWeight(weight);
 
-                    System.out.println("Lastbil registrerad för kaj " + unloadingPlace.getBays().get(0).getBayName());
+                    System.out.println("Lastbil registrerad för kaj ");
                 }
             } else if (choiceOfAction == 3) {
                 quit = true;
@@ -54,4 +53,3 @@ public class Menu {
         }
     }
 }
-

@@ -3,15 +3,22 @@ import java.util.List;
 
 public class UnloadingPlace {
     private List<Bay> bays;
+    private Bay bayA = new VanBay("A");
+    private Bay bayB = new VanBay("B");
+    private Bay bayC= new VanBay("C");
+    private Bay bayD = new VanBay("D");
+    private Bay bayE = new VanBay("E");
+
+
+
     Vehicle vehicle;
-    Van van;
     public UnloadingPlace() {
         bays = new ArrayList<>();
-        bays.add(new VanBay("A"));
-        bays.add(new VanBay("B"));
-        bays.add(new SmallTruckBay("C"));
-        bays.add(new SmallTruckBay("D"));
-        bays.add(new HeavyTruckBay("E"));
+        bays.add(bayA);
+        bays.add(bayB);
+        bays.add(bayC);
+        bays.add(bayD);
+        bays.add(bayE);
     }
 
     public List<Bay> getBays() {
@@ -22,16 +29,22 @@ public class UnloadingPlace {
 
         for (Bay bay : bays) {
             if (bay.getBayName().equals("A") && vehicle.getWeight()<5000)  {
-                addVehicle(vehicle);
-            } else if (bay.getBayName().equals("B")) {
-                addVehicle(vehicle);
+                bayA.setVehicle(vehicle);
+                break;
+            } else if (bay.getBayName().equals("B") && vehicle.getWeight()<3000){
+                bayB.setVehicle(vehicle);
+                break;
             } else if (bay.getBayName().equals("C") && vehicle.getWeight()< 9000)  {
-                addVehicle(vehicle);
+                bayC.setVehicle(vehicle);
+                break;
             } else if (bay.getBayName().equals("D")) {
-                addVehicle(vehicle);
+                bayD.setVehicle(vehicle);
+                break;
             } else if (bay.getBayName().equals("E")) {
-                addVehicle(vehicle);
+                bayE.setVehicle(vehicle);
+                break;
             }
         }
     }
 }
+

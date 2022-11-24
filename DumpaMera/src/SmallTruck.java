@@ -1,9 +1,6 @@
-public class SmallTruck extends Vehicle{
-    public SmallTruck(String typeOfTruck) {
-        super(typeOfTruck);
+public class SmallTruck extends Vehicle {
+    public SmallTruck(int weight) {
+        super("Small truck", weight);
     }
-
-    /*public SmallTruck(List<Vehicle> vehicleList, String typeOfTruck, int weight) {
-        super(vehicleList, typeOfTruck, weight);*/
-    }
+}
 

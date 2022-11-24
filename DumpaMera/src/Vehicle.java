@@ -1,20 +1,19 @@
-import java.util.List;
-
 public abstract class Vehicle {
     private int weight;
     private String typeOfTruck;
 
-    public Vehicle(String typeOfTruck) {
+    public Vehicle(String typeOfTruck, int weight) {
+        this.weight = weight;
         this.typeOfTruck = typeOfTruck;
     }
 
     public int getWeight() {
+
         return weight;
     }
 
-    public void setWeight(int weight) {
-        this.weight = weight;
-    }
+
+
 
     public String getTypeOfTruck() {
         return typeOfTruck;
@@ -22,8 +21,7 @@ public abstract class Vehicle {
 
     @Override
     public String toString() {
-        return typeOfTruck + " " + weight + "kg"; /*"weight='" + weight + '\'' +
-                ", typeOfTruck='" + typeOfTruck + '\'' +
-                '}';*/
+        return typeOfTruck + " " + weight + "kg";
+
     }
 }
