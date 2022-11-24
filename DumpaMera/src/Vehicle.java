@@ -13,8 +13,6 @@ public abstract class Vehicle {
     }
 
 
-
-
     public String getTypeOfTruck() {
         return typeOfTruck;
     }

@@ -1,6 +1,6 @@
 public class OutPrint {
 
-    public void FirstMenu (){
+    public void FirstMenu() {
         System.out.println("""
                 Avlastningsstaionen dumpa mera\s
                    1. Se parkerade lastbilar\s
@@ -9,6 +9,7 @@ public class OutPrint {
                 Välj från listan:""");
 
     }
+
     public void secondMenu() {
 
         System.out.println("""

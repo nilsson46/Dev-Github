@@ -32,8 +32,7 @@ public class Menu {
                 if (choiceOfTruck == 1) {
                     vehicle = new Van(weight);
                     unloadingPlace.addVehicle(vehicle);
-                }
-                else if (choiceOfTruck == 2) {
+                } else if (choiceOfTruck == 2) {
                     vehicle = new SmallTruck(weight);
                     unloadingPlace.addVehicle(vehicle);
 

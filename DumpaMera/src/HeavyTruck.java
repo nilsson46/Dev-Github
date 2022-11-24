@@ -1,8 +1,8 @@
-public class HeavyTruck extends Vehicle{
+public class HeavyTruck extends Vehicle {
 
     public HeavyTruck(int weight) {
 
-        super("Heavy truck",weight);
+        super("Heavy truck", weight);
     }
 }
 

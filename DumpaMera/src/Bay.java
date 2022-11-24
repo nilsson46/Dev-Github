@@ -4,7 +4,7 @@ public abstract class Bay {
     private String bayName;
 
 
-    protected Bay (String bayName){
+    protected Bay(String bayName) {
         this.vehicle = null;
         this.bayName = bayName;
 
