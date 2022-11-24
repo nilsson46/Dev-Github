@@ -15,11 +15,11 @@ public class Menu {
             int choiceOfAction = scanner.nextInt();
 
             if (choiceOfAction == 1) {
-                System.out.println(unloadingPlace.getBays().get(0).getBayName() + " - " + unloadingPlace.getBays().get(0).getVehicle());
-                System.out.println(unloadingPlace.getBays().get(1).getBayName() + " - " + unloadingPlace.getBays().get(1).getVehicle());
-                System.out.println(unloadingPlace.getBays().get(2).getBayName() + " - " + unloadingPlace.getBays().get(2).getVehicle());
-                System.out.println(unloadingPlace.getBays().get(3).getBayName() + " - " + unloadingPlace.getBays().get(3).getVehicle());
-                System.out.println(unloadingPlace.getBays().get(4).getBayName() + " - " + unloadingPlace.getBays().get(4).getVehicle());
+                List<Bay> bays = unloadingPlace.getBays();
+
+                for(Bay bay : bays) {
+                    System.out.println(bay.getBayName() + " - " + bay.getVehicle());
+                }
 
             } else if (choiceOfAction == 2) {
 
